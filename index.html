@@ -66,21 +66,23 @@
       margin: 1em 0;
       padding: 0;
     }
-    .panel {
-      width: 95%;
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #000;
-      color: #00ffff;
-      text-align: left;
-      box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      overflow: hidden;
-      border: 1px solid #00ffff;
-    }
+  .panel {
+  width: 95%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #000;
+  color: #00ffff;
+  text-align: left;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: hidden;
+  border: 1px solid #00ffff;
+  position: relative; /* Hinzufügen von position: relative */
+  left: -30px;        /* Hinzufügen von left: -20px  (oder ein anderer passender Wert) */
+}
     .sidebar {
       width: 180px;
       display: flex;
@@ -111,6 +113,9 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      /* Reducere lățime main-content */
+      max-width: calc(100% - 200px - 350px); /* Sidebar width + System Log width + some extra margin */
+      border: 2px solid red; /* Zum Testen hinzugefügt */
     }
     .tab-section {
       display: none;
@@ -340,7 +345,7 @@
               <img src="https://cdn.gamma.app/fhpleqvbjim2f32/32851d0aaa0c45209005ef0d6806bb45/original/5614f899-460c-402b-a3c3-97edf65963d1.png"
                    alt="Host" class="host-photo"/>
               <div class="host-details">
-                <p><strong>Nume:</strong> Bernard Lowe</p>
+                <p><strong>Nume:</strong> HOSTCUB</p>
                 <p><strong>Grup:</strong> Host</p>
                 <p><strong>Stare:</strong> Activ</p>
               </div>
@@ -438,7 +443,7 @@
       </form>
     </div>
   </div>
- 
+
   <!-- Stare și Diagnostic -->
     <div class="section status-display" id="status">
       <h2>Stare și Diagnostic</h2>
